@@ -1,0 +1,711 @@
+{
+ "deal": [
+  {
+   "in": [
+    30,
+    250,
+    null,
+    null
+   ],
+   "out": {
+    "quantity": 30,
+    "rate_per_piece": 250,
+    "expected_total": 7500,
+    "material_expenses": null,
+    "net_after_expenses": null,
+    "estimated_hours": null,
+    "hourly_net": null,
+    "hourly_gross": null,
+    "net_per_piece": null,
+    "expense_share_pct": null
+   }
+  },
+  {
+   "in": [
+    30,
+    250,
+    1200,
+    20
+   ],
+   "out": {
+    "quantity": 30,
+    "rate_per_piece": 250,
+    "expected_total": 7500,
+    "material_expenses": 1200,
+    "net_after_expenses": 6300,
+    "estimated_hours": 20,
+    "hourly_net": 315,
+    "hourly_gross": 375,
+    "net_per_piece": 210,
+    "expense_share_pct": 16
+   }
+  },
+  {
+   "in": [
+    100,
+    80,
+    1500,
+    90
+   ],
+   "out": {
+    "quantity": 100,
+    "rate_per_piece": 80,
+    "expected_total": 8000,
+    "material_expenses": 1500,
+    "net_after_expenses": 6500,
+    "estimated_hours": 90,
+    "hourly_net": 72.22,
+    "hourly_gross": 88.89,
+    "net_per_piece": 65,
+    "expense_share_pct": 18.75
+   }
+  },
+  {
+   "in": [
+    12,
+    333.5,
+    0,
+    7
+   ],
+   "out": {
+    "quantity": 12,
+    "rate_per_piece": 333.5,
+    "expected_total": 4002,
+    "material_expenses": 0,
+    "net_after_expenses": 4002,
+    "estimated_hours": 7,
+    "hourly_net": 571.71,
+    "hourly_gross": 571.71,
+    "net_per_piece": 333.5,
+    "expense_share_pct": 0
+   }
+  },
+  {
+   "in": [
+    7,
+    45.25,
+    100.5,
+    3.5
+   ],
+   "out": {
+    "quantity": 7,
+    "rate_per_piece": 45.25,
+    "expected_total": 316.75,
+    "material_expenses": 100.5,
+    "net_after_expenses": 216.25,
+    "estimated_hours": 3.5,
+    "hourly_net": 61.79,
+    "hourly_gross": 90.5,
+    "net_per_piece": 30.89,
+    "expense_share_pct": 31.73
+   }
+  },
+  {
+   "in": [
+    500,
+    12,
+    4000,
+    120
+   ],
+   "out": {
+    "quantity": 500,
+    "rate_per_piece": 12,
+    "expected_total": 6000,
+    "material_expenses": 4000,
+    "net_after_expenses": 2000,
+    "estimated_hours": 120,
+    "hourly_net": 16.67,
+    "hourly_gross": 50,
+    "net_per_piece": 4,
+    "expense_share_pct": 66.67
+   }
+  }
+ ],
+ "req": [
+  {
+   "in": [
+    30,
+    1200,
+    20,
+    150,
+    250
+   ],
+   "out": {
+    "target_hourly": 150,
+    "current_rate": 250,
+    "suggested_rate": 140,
+    "new_total": 4200,
+    "new_net": 3000,
+    "new_hourly_net": 150,
+    "increase_pct": -44,
+    "already_meets_target": true
+   }
+  },
+  {
+   "in": [
+    100,
+    1500,
+    90,
+    300,
+    80
+   ],
+   "out": {
+    "target_hourly": 300,
+    "current_rate": 80,
+    "suggested_rate": 285,
+    "new_total": 28500,
+    "new_net": 27000,
+    "new_hourly_net": 300,
+    "increase_pct": 256.25,
+    "already_meets_target": false
+   }
+  },
+  {
+   "in": [
+    10,
+    0,
+    5,
+    100,
+    500
+   ],
+   "out": {
+    "target_hourly": 100,
+    "current_rate": 500,
+    "suggested_rate": 50,
+    "new_total": 500,
+    "new_net": 500,
+    "new_hourly_net": 100,
+    "increase_pct": -90,
+    "already_meets_target": true
+   }
+  },
+  {
+   "in": [
+    7,
+    100,
+    3.5,
+    250,
+    45.25
+   ],
+   "out": {
+    "target_hourly": 250,
+    "current_rate": 45.25,
+    "suggested_rate": 140,
+    "new_total": 980,
+    "new_net": 880,
+    "new_hourly_net": 251.43,
+    "increase_pct": 209.39,
+    "already_meets_target": false
+   }
+  }
+ ],
+ "cmp": [
+  {
+   "in": [
+    7500,
+    6500,
+    0,
+    0,
+    false
+   ],
+   "out": {
+    "expected": 7500,
+    "received": 6500,
+    "advance_paid": 0,
+    "agreed_deductions": 0,
+    "difference": 1000,
+    "explained": 0,
+    "unexplained": 1000,
+    "total_received_incl_advance": 6500,
+    "is_partial": false,
+    "status": "short"
+   }
+  },
+  {
+   "in": [
+    7500,
+    7500,
+    0,
+    0,
+    false
+   ],
+   "out": {
+    "expected": 7500,
+    "received": 7500,
+    "advance_paid": 0,
+    "agreed_deductions": 0,
+    "difference": 0,
+    "explained": 0,
+    "unexplained": 0,
+    "total_received_incl_advance": 7500,
+    "is_partial": false,
+    "status": "match"
+   }
+  },
+  {
+   "in": [
+    7500,
+    6500,
+    500,
+    500,
+    false
+   ],
+   "out": {
+    "expected": 7500,
+    "received": 6500,
+    "advance_paid": 500,
+    "agreed_deductions": 500,
+    "difference": 1000,
+    "explained": 1000,
+    "unexplained": 0,
+    "total_received_incl_advance": 7000,
+    "is_partial": false,
+    "status": "explained"
+   }
+  },
+  {
+   "in": [
+    7500,
+    6500,
+    0,
+    0,
+    true
+   ],
+   "out": {
+    "expected": 7500,
+    "received": 6500,
+    "advance_paid": 0,
+    "agreed_deductions": 0,
+    "difference": 1000,
+    "explained": 0,
+    "unexplained": 1000,
+    "total_received_incl_advance": 6500,
+    "is_partial": true,
+    "status": "partial_pending"
+   }
+  },
+  {
+   "in": [
+    7500,
+    8000,
+    0,
+    0,
+    false
+   ],
+   "out": {
+    "expected": 7500,
+    "received": 8000,
+    "advance_paid": 0,
+    "agreed_deductions": 0,
+    "difference": -500,
+    "explained": 0,
+    "unexplained": -500,
+    "total_received_incl_advance": 8000,
+    "is_partial": false,
+    "status": "over"
+   }
+  },
+  {
+   "in": [
+    8000,
+    6500,
+    0,
+    0,
+    false
+   ],
+   "out": {
+    "expected": 8000,
+    "received": 6500,
+    "advance_paid": 0,
+    "agreed_deductions": 0,
+    "difference": 1500,
+    "explained": 0,
+    "unexplained": 1500,
+    "total_received_incl_advance": 6500,
+    "is_partial": false,
+    "status": "short"
+   }
+  },
+  {
+   "in": [
+    1234.5,
+    1000,
+    100,
+    50.25,
+    false
+   ],
+   "out": {
+    "expected": 1234.5,
+    "received": 1000,
+    "advance_paid": 100,
+    "agreed_deductions": 50.25,
+    "difference": 234.5,
+    "explained": 150.25,
+    "unexplained": 84.25,
+    "total_received_incl_advance": 1100,
+    "is_partial": false,
+    "status": "short"
+   }
+  }
+ ],
+ "risks": [
+  {
+   "order": {
+    "item": null,
+    "quantity": 30,
+    "rate_per_piece": 250,
+    "deadline_days": null,
+    "material_expenses": null,
+    "estimated_hours": null,
+    "payment_terms": null,
+    "contractor_name": null,
+    "other_terms": null,
+    "advance_received": null
+   },
+   "calc": {
+    "quantity": 30,
+    "rate_per_piece": 250,
+    "expected_total": 7500,
+    "material_expenses": null,
+    "net_after_expenses": null,
+    "estimated_hours": null,
+    "hourly_net": null,
+    "hourly_gross": null,
+    "net_per_piece": null,
+    "expense_share_pct": null
+   },
+   "min_hourly": null,
+   "out": [
+    {
+     "level": "amber",
+     "code": "no_payment_terms",
+     "en": "No payment date or method was agreed. Ask when and how you will be paid.",
+     "ur": "ادائیگی کی تاریخ یا طریقہ طے نہیں ہوا۔ پوچھ لیں کہ پیسے کب اور کیسے ملیں گے۔"
+    },
+    {
+     "level": "amber",
+     "code": "no_expenses",
+     "en": "Material and other costs are not entered, so your real earning may be lower than shown.",
+     "ur": "مٹیریل اور دوسرے خرچے درج نہیں ہوئے، اس لیے اصل کمائی دکھائی گئی رقم سے کم ہو سکتی ہے۔"
+    },
+    {
+     "level": "amber",
+     "code": "no_hours",
+     "en": "Working hours are missing, so the hourly earning cannot be shown.",
+     "ur": "کام کے گھنٹے معلوم نہیں، اس لیے فی گھنٹہ کمائی نہیں دکھائی جا سکتی۔"
+    },
+    {
+     "level": "amber",
+     "code": "no_deadline",
+     "en": "No deadline was agreed.",
+     "ur": "ڈیڈ لائن طے نہیں ہوئی۔"
+    }
+   ]
+  },
+  {
+   "order": {
+    "item": null,
+    "quantity": 100,
+    "rate_per_piece": 80,
+    "deadline_days": 5,
+    "material_expenses": 4500,
+    "estimated_hours": 90,
+    "payment_terms": "after delivery cutting",
+    "contractor_name": null,
+    "other_terms": null,
+    "advance_received": null
+   },
+   "calc": {
+    "quantity": 100,
+    "rate_per_piece": 80,
+    "expected_total": 8000,
+    "material_expenses": 4500,
+    "net_after_expenses": 3500,
+    "estimated_hours": 90,
+    "hourly_net": 38.89,
+    "hourly_gross": 88.89,
+    "net_per_piece": 35,
+    "expense_share_pct": 56.25
+   },
+   "min_hourly": null,
+   "out": [
+    {
+     "level": "red",
+     "code": "high_expense",
+     "en": "Costs take 56.25% of the total payment.",
+     "ur": "خرچے کل ادائیگی کا 56.25% کھا جاتے ہیں۔"
+    },
+    {
+     "level": "red",
+     "code": "tight_deadline",
+     "en": "This needs about 18 hours of work every day to finish on time.",
+     "ur": "وقت پر مکمل کرنے کے لیے روزانہ تقریباً 18 گھنٹے کام کرنا ہوگا۔"
+    },
+    {
+     "level": "amber",
+     "code": "vague_deductions",
+     "en": "Deductions are mentioned but no amount or reason is written down.",
+     "ur": "کٹوتی کا ذکر ہے لیکن رقم یا وجہ طے نہیں ہوئی۔"
+    }
+   ]
+  },
+  {
+   "order": {
+    "item": null,
+    "quantity": 100,
+    "rate_per_piece": 80,
+    "deadline_days": 10,
+    "material_expenses": 1500,
+    "estimated_hours": 90,
+    "payment_terms": "on delivery",
+    "contractor_name": null,
+    "other_terms": null,
+    "advance_received": null
+   },
+   "calc": {
+    "quantity": 100,
+    "rate_per_piece": 80,
+    "expected_total": 8000,
+    "material_expenses": 1500,
+    "net_after_expenses": 6500,
+    "estimated_hours": 90,
+    "hourly_net": 72.22,
+    "hourly_gross": 88.89,
+    "net_per_piece": 65,
+    "expense_share_pct": 18.75
+   },
+   "min_hourly": 100,
+   "out": [
+    {
+     "level": "amber",
+     "code": "tight_deadline",
+     "en": "This needs about 9 hours of work every day to finish on time.",
+     "ur": "وقت پر مکمل کرنے کے لیے روزانہ تقریباً 9 گھنٹے کام کرنا ہوگا۔"
+    },
+    {
+     "level": "amber",
+     "code": "below_target",
+     "en": "Estimated earning is Rs 72.22/hour, below your own target of Rs 100/hour.",
+     "ur": "اندازاً کمائی Rs 72.22 فی گھنٹہ ہے، جو آپ کے اپنے ہدف Rs 100 سے کم ہے۔"
+    }
+   ]
+  }
+ ],
+ "extract": [
+  {
+   "text": "Mujhe 30 frock ka order mila hai, 250 rupay per piece, 5 din mein dena hai.",
+   "asked": null,
+   "out": {
+    "quantity": 30,
+    "item": "frock",
+    "rate_per_piece": 250,
+    "deadline_days": 5
+   }
+  },
+  {
+   "text": "I got an order for 30 dresses, Rs 250 each, deadline 5 days",
+   "asked": null,
+   "out": {
+    "quantity": 30,
+    "item": "dresses",
+    "rate_per_piece": 250,
+    "deadline_days": 5
+   }
+  },
+  {
+   "text": "100 suits 80 rupees per piece, material 1500, 90 hours, 10 days, payment on delivery",
+   "asked": null,
+   "out": {
+    "quantity": 100,
+    "item": "suits",
+    "rate_per_piece": 80,
+    "material_expenses": 1500,
+    "estimated_hours": 90,
+    "deadline_days": 10,
+    "payment_terms": "on delivery"
+   }
+  },
+  {
+   "text": "1200 ka material lagega",
+   "asked": "material_expenses",
+   "out": {
+    "material_expenses": 1200
+   }
+  },
+  {
+   "text": "20 hours lagenge",
+   "asked": "estimated_hours",
+   "out": {
+    "estimated_hours": 20
+   }
+  },
+  {
+   "text": "۳۰ فراک کا آرڈر ہے، ہر پیس ۲۵۰ روپے، ۵ دن میں دینا ہے",
+   "asked": null,
+   "out": {
+    "quantity": 30,
+    "item": "فراک",
+    "deadline_days": 5
+   }
+  },
+  {
+   "text": "500",
+   "asked": "quantity",
+   "out": {
+    "quantity": 500
+   }
+  },
+  {
+   "text": "delivery par",
+   "asked": "payment_terms",
+   "out": {
+    "payment_terms": "delivery par"
+   }
+  },
+  {
+   "text": "kuch nahi",
+   "asked": "material_expenses",
+   "out": {
+    "material_expenses": 0
+   }
+  },
+  {
+   "text": "advance 2000 mila hai, 2 weeks mein dena hai",
+   "asked": null,
+   "out": {
+    "advance_received": 2000,
+    "deadline_days": 14
+   }
+  },
+  {
+   "text": "hello",
+   "asked": null,
+   "out": {}
+  },
+  {
+   "text": "teen suit, bees rupay har piece",
+   "asked": null,
+   "out": {
+    "quantity": 3,
+    "item": "suit",
+    "rate_per_piece": 20
+   }
+  },
+  {
+   "text": "order 1,200 pieces, rate 15 each",
+   "asked": null,
+   "out": {
+    "quantity": 1200,
+    "rate_per_piece": 15
+   }
+  }
+ ],
+ "lang": [
+  {
+   "text": "Mujhe 30 frock ka order mila hai, 250 rupay per piece, 5 din mein dena hai.",
+   "out": "roman"
+  },
+  {
+   "text": "I got an order for 30 dresses, Rs 250 each, deadline 5 days",
+   "out": "en"
+  },
+  {
+   "text": "100 suits 80 rupees per piece, material 1500, 90 hours, 10 days, payment on delivery",
+   "out": "en"
+  },
+  {
+   "text": "1200 ka material lagega",
+   "out": "roman"
+  },
+  {
+   "text": "20 hours lagenge",
+   "out": "en"
+  },
+  {
+   "text": "۳۰ فراک کا آرڈر ہے، ہر پیس ۲۵۰ روپے، ۵ دن میں دینا ہے",
+   "out": "ur"
+  },
+  {
+   "text": "500",
+   "out": "en"
+  },
+  {
+   "text": "delivery par",
+   "out": "en"
+  },
+  {
+   "text": "kuch nahi",
+   "out": "en"
+  },
+  {
+   "text": "advance 2000 mila hai, 2 weeks mein dena hai",
+   "out": "roman"
+  },
+  {
+   "text": "hello",
+   "out": "en"
+  },
+  {
+   "text": "teen suit, bees rupay har piece",
+   "out": "roman"
+  },
+  {
+   "text": "order 1,200 pieces, rate 15 each",
+   "out": "en"
+  }
+ ],
+ "normalize": [
+  {
+   "text": "Mujhe 30 frock ka order mila hai, 250 rupay per piece, 5 din mein dena hai.",
+   "out": "Mujhe 30 frock ka order mila hai, 250 rupay per piece, 5 din mein dena hai."
+  },
+  {
+   "text": "I got an order for 30 dresses, Rs 250 each, deadline 5 days",
+   "out": "I got an order for 30 dresses, Rs 250 each, deadline 5 days"
+  },
+  {
+   "text": "100 suits 80 rupees per piece, material 1500, 90 hours, 10 days, payment on delivery",
+   "out": "100 suits 80 rupees per piece, material 1500, 90 hours, 10 days, payment on delivery"
+  },
+  {
+   "text": "1200 ka material lagega",
+   "out": "1200 ka material lagega"
+  },
+  {
+   "text": "20 hours lagenge",
+   "out": "20 hours lagenge"
+  },
+  {
+   "text": "۳۰ فراک کا آرڈر ہے، ہر پیس ۲۵۰ روپے، ۵ دن میں دینا ہے",
+   "out": "30 فراک کا آرڈر ہے  ہر پیس 250 روپے  5 دن میں دینا ہے"
+  },
+  {
+   "text": "500",
+   "out": "500"
+  },
+  {
+   "text": "delivery par",
+   "out": "delivery par"
+  },
+  {
+   "text": "kuch nahi",
+   "out": "kuch nahi"
+  },
+  {
+   "text": "advance 2000 mila hai, 2 weeks mein dena hai",
+   "out": "advance 2000 mila hai, 2 weeks mein dena hai"
+  },
+  {
+   "text": "hello",
+   "out": "hello"
+  },
+  {
+   "text": "teen suit, bees rupay har piece",
+   "out": "3 suit, 20 rupay har piece"
+  },
+  {
+   "text": "order 1,200 pieces, rate 15 each",
+   "out": "order 1200 pieces, rate 15 each"
+  }
+ ]
+}

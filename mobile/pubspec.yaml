@@ -1,0 +1,46 @@
+name: amana_app
+description: Amana AI - voice-first work companion for home-based women workers.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  crypto: ^3.0.3
+  provider: ^6.1.2
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
+  record: ^6.0.0
+  path_provider: ^2.1.4
+  image_picker: ^1.1.2
+  flutter_tts: ^4.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.6
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/icon/icon.png
+  adaptive_icon_background: "#243063"
+  adaptive_icon_foreground: assets/icon/icon_fg.png
+
+flutter_native_splash:
+  color: "#243063"
+  image: assets/icon/splash_logo.png
+  android_12:
+    color: "#243063"
+    image: assets/icon/splash_logo.png
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/

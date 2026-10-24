@@ -1,0 +1,68 @@
+name: Build Android APK
+
+# Builds the app on GitHub's servers and publishes the APK under Releases,
+# so you can download it from any phone: Repo -> Releases -> "Amana AI - latest APK".
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter --version
+      - run: flutter pub get
+
+      # checks never block the APK; read their result in the log if something looks off
+      - run: flutter analyze
+        continue-on-error: true
+      - run: flutter test
+        continue-on-error: true
+
+      # AI_PROXY_URL / AI_PROXY_TOKEN come from GitHub Secrets (never stored in the code).
+      # If they are not set, the app still builds and runs with built-in rules.
+      - name: Build release APK
+        run: >
+          flutter build apk --release
+          --dart-define=AI_PROXY_URL=${{ secrets.AI_PROXY_URL }}
+          --dart-define=AI_PROXY_TOKEN=${{ secrets.AI_PROXY_TOKEN }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amana-ai-apk
+          path: mobile/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Publish to Releases
+        uses: ncipollo/release-action@v1
+        with:
+          tag: apk-latest
+          name: "Amana AI - latest APK"
+          body: |
+            Download **app-release.apk** below and install it on an Android phone
+            (allow "Install unknown apps" for your browser if asked).
+            Built automatically from the latest commit.
+          artifacts: mobile/build/app/outputs/flutter-apk/app-release.apk
+          allowUpdates: true
+          replacesArtifacts: true
+          makeLatest: true
+          token: ${{ secrets.GITHUB_TOKEN }}
