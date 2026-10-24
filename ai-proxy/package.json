@@ -1,0 +1,7 @@
+{
+  "name": "amana-ai-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny AI proxy for the Amana app. Holds the API keys so they never ship inside the APK.",
+  "engines": { "node": ">=18" }
+}
